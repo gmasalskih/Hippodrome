@@ -9,4 +9,7 @@ class Horse(private val number: Int){
         speed = (1..100).random()
         return speed
     }
+    fun copy(): Horse{
+        return  Horse(this.number).also { it.speed = this.speed }
+    }
 }
